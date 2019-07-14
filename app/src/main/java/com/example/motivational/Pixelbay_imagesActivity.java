@@ -49,7 +49,7 @@ public class Pixelbay_imagesActivity extends AppCompatActivity {
 
         pixelbay_request_api = Pixelbay_retrofitApi.link_RetrofitApi().create(Pixelbay_request_api.class);
 
-        Call<pixel_bay_api_model> call = pixelbay_request_api.getSearchImages("13028103-1ed3e7eace4a8414aac9b2afd", category, 200);
+        Call<pixel_bay_api_model> call = pixelbay_request_api.getSearchImages("13028103-1ed3e7eace4a8414aac9b2afd", category,"vertical", 200);
         call.enqueue(new Callback<pixel_bay_api_model>() {
             @Override
             public void onResponse(Call<pixel_bay_api_model> call, Response<pixel_bay_api_model> response) {

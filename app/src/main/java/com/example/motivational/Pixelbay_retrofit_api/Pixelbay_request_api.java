@@ -11,5 +11,5 @@ import retrofit2.http.Query;
 public interface Pixelbay_request_api {
 
     @GET("/api/")
-    Call<pixel_bay_api_model> getSearchImages(@Query("key") String api, @Query("category") String search, @Query("per_page") int no);
+    Call<pixel_bay_api_model> getSearchImages(@Query("key") String api, @Query("category") String search,@Query("orientation") String orientation, @Query("per_page") int no);
 }

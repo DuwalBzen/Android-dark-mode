@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".App_settingActivity"></activity>
-        <activity android:name=".Pixelbay_detailActivity" />
+        <activity android:name=".Pixelbay_detailActivity" android:theme="@style/pixelbay_detail_theme"/>
         <activity android:name=".Pixelbay_imagesActivity" />
         <activity android:name=".Theleadermindset_detailActivity" />
         <activity android:name=".TheleadersmindsetActivity" />

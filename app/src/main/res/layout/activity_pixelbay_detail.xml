@@ -7,10 +7,11 @@
     android:id="@+id/pixelbay_layout"
     tools:context=".Pixelbay_detailActivity">
 
-    <ImageView
+    <com.github.chrisbanes.photoview.PhotoView
         android:id="@+id/pixelbay_detailed_image_id"
+        android:scaleType="fitXY"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
 
     <com.github.clans.fab.FloatingActionMenu
         android:layout_alignParentBottom="true"
@@ -35,7 +36,7 @@
         <com.github.clans.fab.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:fab_label="Set favourate"
+            app:fab_label="Download Image"
             app:fab_size="mini"
             android:src="@drawable/love_icon"
             android:id="@+id/pixelbay_floating_action_favourate_id"/>

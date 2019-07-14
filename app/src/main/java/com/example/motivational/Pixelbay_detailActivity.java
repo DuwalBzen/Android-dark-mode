@@ -21,11 +21,12 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.github.clans.fab.FloatingActionButton;
 
 public class Pixelbay_detailActivity extends AppCompatActivity {
     private RelativeLayout pixelbay_layout;
-private ImageView pixelbay_image;
+private PhotoView pixelbay_image;
 private Bundle extras;
 private FloatingActionButton share_image;
 private final int REQUEST_CODE=300;
@@ -39,6 +40,12 @@ private final int REQUEST_CODE=300;
 pixelbay_layout=findViewById(R.id.pixelbay_layout);
         extras=getIntent().getExtras();
         pixelbay_image=findViewById(R.id.pixelbay_detailed_image_id);
+
+
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        );
 
         Glide.with(this).load(extras.getString("detail_image")).into(pixelbay_image);
 
@@ -107,20 +114,20 @@ pixelbay_layout=findViewById(R.id.pixelbay_layout);
         if (darkmode.contains("mode")) {
             pixelbay_layout.setBackgroundColor(getResources().getColor(R.color.colorBlack));
 
-            Window window = getWindow();
+           /* Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(getResources().getColor(R.color.colorBlack));
             getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources()
-                    .getColor(R.color.colorBlack)));
+                    .getColor(R.color.colorBlack)));*/
 
         } else {
             pixelbay_layout.setBackgroundColor(getResources().getColor(R.color.colorWhite));
 
-            Window window = getWindow();
+           /* Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(getResources().getColor(R.color.colorPrimaryDark));
             getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources()
-                    .getColor(R.color.colorPrimary)));
+                    .getColor(R.color.colorPrimary)));*/
         }
     }
 
