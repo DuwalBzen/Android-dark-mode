@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/thegoodquotes_layout_id"
+    tools:context=".Thegoodquotes_detailedActivity">
+
+    <ImageView
+        android:id="@+id/detailed_image_id"
+        android:layout_width="match_parent"
+        android:layout_height="641dp" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/main_floating_action_menu_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:menu_showShadow="true"
+        app:menu_openDirection="up"
+        app:menu_backgroundColor="@android:color/transparent"
+        android:layout_alignParentRight="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="share Image"
+            app:fab_size="mini"
+            android:src="@drawable/fab_share"
+            android:id="@+id/main_floating_action_share_id"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Set favourate"
+            app:fab_size="mini"
+            android:src="@drawable/love_icon"
+            android:id="@+id/main_floating_action_favourate_id"/>
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>
